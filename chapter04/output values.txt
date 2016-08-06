@@ -11,3 +11,18 @@ x value: 148 y value: 116 content: array([111, 125, 116], dtype=uint8)
 x value: 148 y value: 117 content: array([84, 96, 89], dtype=uint8)
 x value: 148 y value: 118 content: array([79, 86, 79], dtype=uint8)
 x value: 148 y value: 119 content: array([56, 58, 52], dtype=uint8)
+
+Pixel at (270,201) - Red: 239, Green: 240, Blue: 244
+Pixel at (270,202) - Red: 239, Green: 240, Blue: 244
+Pixel at (270,203) - Red: 239, Green: 240, Blue: 244
+Pixel at (270,204) - Red: 238, Green: 239, Blue: 243
+Pixel at (270,205) - Red: 238, Green: 239, Blue: 243
+Pixel at (270,206) - Red: 238, Green: 239, Blue: 243
+Pixel at (270,207) - Red: 238, Green: 239, Blue: 243
+Pixel at (270,208) - Red: 238, Green: 239, Blue: 243
+Pixel at (270,209) - Red: 237, Green: 238, Blue: 242
+Pixel at (270,210) - Red: 237, Green: 238, Blue: 242
+Pixel at (270,211) - Red: 237, Green: 238, Blue: 243
+Pixel at (270,212) - Red: 236, Green: 237, Blue: 242
+Pixel at (270,213) - Red: 236, Green: 237, Blue: 242
+Pixel at (270,214) - Red: 236, Green: 237, Blue: 242
