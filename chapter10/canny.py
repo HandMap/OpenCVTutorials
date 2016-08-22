@@ -21,5 +21,5 @@ cv2.imwrite("blurred.png", image)
 # above 150 are considered edges.
 canny = cv2.Canny(image, 30, 150)
 cv2.imshow("Canny", canny)
-cv2.imwrite("canny.png", canny)
+cv2.imwrite("canny-img.png", canny)
 cv2.waitKey(0)
