@@ -4,12 +4,14 @@ import cv2
 # Load the image, convert it to grayscale, and show it
 image = cv2.imread("hand.png")
 image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-cv2.imshow("Original", image)
+cv2.imshow("Greyscale", image)
+cv2.imwrite("greyscale.png", image)
 
 # Compute the Laplacian of the image
 lap = cv2.Laplacian(image, cv2.CV_64F)
 lap = np.uint8(np.absolute(lap))
 cv2.imshow("Laplacian", lap)
+cv2.imwrite("laplacian.png", lap)
 cv2.waitKey(0)
 
 # Compute gradients along the X and Y axis, respectively
@@ -32,6 +34,9 @@ sobelCombined = cv2.bitwise_or(sobelX, sobelY)
 
 # Show our Sobel images
 cv2.imshow("Sobel X", sobelX)
+cv2.imwrite("sobel-x.png", sobelX)
 cv2.imshow("Sobel Y", sobelY)
+cv2.imwrite("sobel-y.png", sobelY)
 cv2.imshow("Sobel Combined", sobelCombined)
+cv2.imwrite("sobel-combined.png", sobelCombined)
 cv2.waitKey(0)
