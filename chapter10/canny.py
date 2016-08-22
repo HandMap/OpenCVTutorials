@@ -19,7 +19,10 @@ cv2.imwrite("blurred.png", image)
 # the intensities are "connected". In this case, any gradient
 # values below 30 are considered non-edges whereas any value
 # above 150 are considered edges.
-canny = cv2.Canny(image, 30, 150)
-cv2.imshow("Canny", canny)
-cv2.imwrite("canny-img.png", canny)
-cv2.waitKey(0)
+
+for x in range(10, 60, 5):
+    for y in range(90, 210, 5):
+
+        canny = cv2.Canny(image, x, y)
+        cv2.putText(canny, "x:"+str(x)+" y:"+str(y), (500, 650), cv2.FONT_HERSHEY_SIMPLEX, 1, 255)
+        cv2.imwrite("_canny-img-"+str(x)+"-"+str(y)+".png", canny)
