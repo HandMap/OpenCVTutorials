@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 
 cap = cv2.VideoCapture(0)
-cascade = cv2.CascadeClassifier('haarcascade_hand.xml')
+cascade = cv2.CascadeClassifier('classifiers/haarcascade_hand.xml')
 
 def detect(img, cascade):
     rects = cascade.detectMultiScale(img, 1.3, 5)

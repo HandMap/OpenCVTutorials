@@ -38,7 +38,7 @@ def detect_hand(image):
     # equalize histogram
     cvEqualizeHist(grayscale, grayscale)
 
-    cashand = cvLoadHaarClassifierCascade('haarcascade_hand.xml', cvSize(1,1))
+    cashand = cvLoadHaarClassifierCascade('classifiers/haarcascade_hand.xml', cvSize(1,1))
     hands = cvHaarDetectObjects(grayscale,
             cashand,
             storage,
@@ -69,7 +69,7 @@ def detect_eye(image):
     # equalize histogram
     cvEqualizeHist(grayscale, grayscale)
 
-    caseye = cvLoadHaarClassifierCascade('haarcascade_eye.xml', cvSize(1,1))
+    caseye = cvLoadHaarClassifierCascade('classifiers/haarcascade_eye.xml', cvSize(1,1))
     eyes = cvHaarDetectObjects(grayscale,
             caseye,
             storage,
@@ -101,7 +101,7 @@ def detect_face(image):
     cvEqualizeHist(grayscale, grayscale)
 
     # detect objects
-    cascade = cvLoadHaarClassifierCascade('haarcascade_frontalface_alt.xml', cvSize(1,1))
+    cascade = cvLoadHaarClassifierCascade('classifiers/haarcascade_frontalface_alt.xml', cvSize(1,1))
     faces = cvHaarDetectObjects(grayscale,
             cascade,
             storage,
