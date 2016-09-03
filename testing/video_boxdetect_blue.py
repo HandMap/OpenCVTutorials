@@ -1,42 +1,13 @@
 import numpy as np
 import cv2
 
-
-def nothing(*arg):
-    pass
-
-cv2.namedWindow('RGB')
-cv2.createTrackbar('lower - red', 'RGB', 0, 255, nothing)
-cv2.createTrackbar('lower - green', 'RGB', 0, 255, nothing)
-cv2.createTrackbar('lower - blue', 'RGB', 0, 255, nothing)
-cv2.createTrackbar('upper - red', 'RGB', 1, 255, nothing)
-cv2.createTrackbar('upper - green', 'RGB', 1, 255, nothing)
-cv2.createTrackbar('upper - blue', 'RGB', 1, 255, nothing)
-cap = cv2.VideoCapture(0)
-
 while True:
     # Capture frame-by-frame
     ret, image = cap.read()
 
-    thrs1 = cv2.getTrackbarPos('lower - red', 'RGB')
-    thrs2 = cv2.getTrackbarPos('lower - green', 'RGB')
-    thrs3 = cv2.getTrackbarPos('lower - blue', 'RGB')
-    thrs4 = cv2.getTrackbarPos('upper - red', 'RGB')
-    thrs5 = cv2.getTrackbarPos('upper - green', 'RGB')
-    thrs6 = cv2.getTrackbarPos('upper - blue', 'RGB')
-
-    if(thrs1 > thrs4):
-        cv2.setTrackbarPos('lower - red', 'RGB', thrs4 - 1)
-    if(thrs2 > thrs5):
-        cv2.setTrackbarPos('lower - green', 'RGB', thrs5 - 1)
-    if(thrs3 > thrs6):
-        cv2.setTrackbarPos('lower - blue', 'RGB', thrs6 - 1)
-
     # define the list of boundaries
     boundaries = [
-        ([86, 31, 4], [220, 88, 50])
-        #([86, 31, 4], [246, 94, 56])
-        #([200, 200, 5], [255, 255, 100])
+	([86, 31, 4], [220, 88, 50])
     ]
 
     # loop over the boundaries
