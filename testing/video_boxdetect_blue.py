@@ -9,7 +9,7 @@ while True:
 
     # define the list of boundaries
     boundaries = [
-	([86, 31, 4], [220, 88, 50])
+        ([86, 31, 4], [246, 94, 56])
     ]
 
     # loop over the boundaries
